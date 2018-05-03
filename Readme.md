@@ -1,0 +1,1 @@
+This is sample solution for accessing Readme.md
