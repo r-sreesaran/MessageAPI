@@ -19,8 +19,12 @@ httpBasicAuthHandler = urllib.request.HTTPBasicAuthHandler(password_mgr)
 
 opener = urllib.request.build_opener(httpsHandler,httpBasicAuthHandler)
 urllib.request.install_opener(opener)
+response=None
 
-response = urllib.request.urlopen(url)
+try:
+  response = urllib.request.urlopen(url)
+except ConnectionError as error:
+  print(error)
   
 jsonData = json.load(response)
 objects = jsonData['objects']
