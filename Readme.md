@@ -1,1 +1,1 @@
-This is sample solution for accessing Readme.md
+This is sample python scripts for accessing plivo apis
